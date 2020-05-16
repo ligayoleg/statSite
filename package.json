@@ -1,0 +1,28 @@
+{
+  "name": "statSite",
+  "version": "1.0.0",
+  "description": "Data visualization site using D3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ligayoleg/statSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ligayoleg/statSite/issues"
+  },
+  "homepage": "https://github.com/ligayoleg/statSite#readme",
+  "dependencies": {
+    "d3": "^5.16.0",
+    "sass": "^1.26.5"
+  },
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
