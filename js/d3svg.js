@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (function () {
   const dataset = [
     [34, 78],
@@ -34,6 +35,42 @@
 
   svg
     .selectAll("circle")
+=======
+(function(){
+    const dataset = [
+        [ 34,     78 ],
+        [ 109,   280 ],
+        [ 310,   120 ],
+        [ 79,   411 ],
+        [ 420,   220 ],
+        [ 233,   145 ],
+        [ 333,   96 ],
+        [ 222,    333 ],
+        [ 78,    320 ],
+        [ 21,   123 ]
+      ];
+
+    // dimensions for svg
+    const w = 600;
+    const h = 400;
+    const padding = 60;
+
+
+    const xScale = d3.scaleLinear()
+            .domain([0, d3.max(dataset, (d) => d[0])])
+            .range([padding, w - padding]);
+
+    const yScale = d3.scaleLinear()
+            .domain([0, d3.max(dataset, (d) => d[1])])
+            .range([h - padding, padding]);
+
+    const svg = d3.select("body")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h)
+            .style("background","#eee");
+
+    svg.selectAll("circle")
     .data(dataset)
     .enter()
     .append("circle")
@@ -55,10 +92,25 @@
   const yAxis = d3.axisLeft(yScale);
   // Add your code above this line
 
+<<<<<<< HEAD
   svg
     .append("g")
     .attr("transform", "translate(0," + (h - padding) + ")")
     .call(xAxis);
+=======
+    const xAxis = d3.axisBottom(xScale);
+    // Add your code below this line
+    const yAxis = d3.axisLeft(yScale);
+    
+    svg.append("g")
+    .attr("transform", "translate(0," + (h - padding) + ")")
+    .call(xAxis);
+
+    svg.append("g")
+    .attr("transform", "translate(60,0)")
+    .call(yAxis);
+    
+>>>>>>> 2946f52fd79205ae00210402371e816e4c327acb
 
   // Add your code below this line
   svg.append("g").attr("transform", "translate(60,0)").call(yAxis);
