@@ -12,9 +12,11 @@
         [ 21,   123 ]
       ];
 
+    // dimensions for svg
     const w = 600;
     const h = 400;
     const padding = 60;
+
 
     const xScale = d3.scaleLinear()
             .domain([0, d3.max(dataset, (d) => d[0])])
@@ -28,7 +30,7 @@
             .append("svg")
             .attr("width", w)
             .attr("height", h)
-            .style("background","#ccc");
+            .style("background","#eee");
 
     svg.selectAll("circle")
     .data(dataset)
@@ -50,5 +52,10 @@
     // Add your code below this line
     const yAxis = undefined;
     
+    // svg.selectAll("line")
+    // .data(dataset)
+    // .enter()
+    // .append("line")
+    // .line();
 
 })();
