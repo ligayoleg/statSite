@@ -50,12 +50,15 @@
 
     const xAxis = d3.axisBottom(xScale);
     // Add your code below this line
-    const yAxis = undefined;
+    const yAxis = d3.axisLeft(yScale);
     
-    // svg.selectAll("line")
-    // .data(dataset)
-    // .enter()
-    // .append("line")
-    // .line();
+    svg.append("g")
+    .attr("transform", "translate(0," + (h - padding) + ")")
+    .call(xAxis);
+
+    svg.append("g")
+    .attr("transform", "translate(60,0)")
+    .call(yAxis);
+    
 
 })();
