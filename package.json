@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/ligayoleg/statSite#readme",
   "dependencies": {
-    "d3": "^5.16.0",
+    "d3": "^7.6.1",
     "sass": "^1.26.5"
   },
   "devDependencies": {
